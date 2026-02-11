@@ -1,12 +1,12 @@
 import React from 'react';
-import nPaxImage from '../assets/N-Pax.png';
+import nOxImage from "../assets/NOX.png";
 import { Globe } from 'lucide-react';
 
 export default function Navigation() {
   return (
     <nav className="relative z-10 flex items-center justify-between px-8 py-6 bg-black/80">
       <div className="flex items-center">
-        <img src={nPaxImage} alt="N-PAX Logo" className="h-12 w-auto" />
+        <img src={nOxImage} alt="N-PAX Logo" className="h-12 w-auto" />
       </div>
 
       <div className="flex items-center space-x-12">

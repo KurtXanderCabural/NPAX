@@ -7,6 +7,9 @@ import logo3 from "../assets/3.png";
 import logo4 from "../assets/4.png";
 import logo5 from "../assets/5.png";
 import logo6 from "../assets/6.png";
+import blog1 from "../assets/blog1.png";
+import blog2 from "../assets/blog2.png";
+import blog3 from "../assets/blog3.png";
 import awardImage from "../assets/award.png";
 import chartImage from "../assets/Chart.png";
 
@@ -24,28 +27,28 @@ export default function LandingPage() {
             Home
           </a>
           <a
-            href="#services"
+            href=""
             className="text-white hover:text-blue-500 transition"
           >
             Services
           </a>
           <a
-            href="#blogs"
+            href=""
             className="text-white hover:text-blue-500 transition"
           >
             Blogs
           </a>
           <a
-            href="https://www.n-pax.com/update/index_careers.php#"
+            href=""
             className="text-white hover:text-blue-500 transition"
           >
             Careers
           </a>
           <a
-            href="https://www.n-pax.com/about-us.php"
+            href=""
             className="text-white hover:text-blue-500 transition"
           >
-            Abouts Us
+            About Us
           </a>
         </div>
 
@@ -351,8 +354,8 @@ export default function LandingPage() {
             <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:scale-105">
               <div className="aspect-video bg-gradient-to-br from-purple-900 to-red-900 flex items-center justify-center">
                 <img
-                  src="/src/assets/blog1.png"
-                  alt="Event performance"
+                  src={blog1} 
+                  alt="Event performance" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -377,10 +380,11 @@ export default function LandingPage() {
                   className="w-full h-full"
                 >
                   <img
-                    src="/src/assets/blog2.png"
-                    alt="HRC Booth"
+                    src={blog2} 
+                    alt="HRC Booth" 
                     className="w-full h-full object-cover"
                   />
+                  <source src="/public/blog2.png" />
                 </a>
               </div>
               <div className="p-6">
@@ -404,8 +408,8 @@ export default function LandingPage() {
                   className="w-full h-full"
                 >
                   <img
-                    src="/src/assets/blog3.png"
-                    alt="HRC Booth"
+                    src={blog3} 
+                    alt="HRC Booth" 
                     className="w-full h-full object-cover"
                   />
                 </a>
