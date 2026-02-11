@@ -7,9 +7,9 @@ import logo3 from "../assets/3.png";
 import logo4 from "../assets/4.png";
 import logo5 from "../assets/5.png";
 import logo6 from "../assets/6.png";
-import blog1 from "../assets/blog1.png";
-import blog2 from "../assets/blog2.png";
-import blog3 from "../assets/blog3.png";
+import blog1 from "../../public/blog/blog1.png";
+import blog2 from "../../public/blog/blog2.png";
+import blog3 from "../../public/blog/blog3.png";
 import awardImage from "../assets/award.png";
 import chartImage from "../assets/Chart.png";
 
