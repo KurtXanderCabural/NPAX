@@ -1,5 +1,5 @@
 import React from "react";
-import nPaxImage from "../assets/N-Pax.png";
+import nOxImage from "../assets/Nox.png";
 import { Globe } from "lucide-react";
 import logo1 from "../assets/1.png";
 import logo2 from "../assets/2.png";
@@ -16,7 +16,7 @@ export default function LandingPage() {
       {/* Navigation */}
       <nav className="relative z-10 flex items-center justify-between px-8 py-6 bg-black/80">
         <div className="flex items-center">
-          <img src={nPaxImage} alt="N-PAX Logo" className="h-12 w-auto" />
+          <img src={nOxImage} alt="NOX Logo" className="h-12 w-auto" />
         </div>
 
         <div className="flex items-center space-x-12">
@@ -56,15 +56,15 @@ export default function LandingPage() {
       <div className="relative px-8 py-16 overflow-hidden h-auto">
         {/* Video Background */}
        <video
-  className="absolute inset-0 w-full object-cover opacity-40"
-  style={{ height: "600px" }}
-  autoPlay
-  loop
-  muted
-  playsInline
->
-  <source src="/video/npax.mp4" type="video/mp4" />
-</video>
+          className="absolute inset-0 w-full object-cover opacity-40"
+          style={{ height: "600px" }}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/video/npax.mp4" type="video/mp4" />
+        </video>
   
 
         {/* Left Content */}
@@ -483,7 +483,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={nPaxImage} alt="N-PAX Logo" className="h-10 w-auto" />
+            <img src={nOxImage} alt="NOX Logo" className="h-10 w-auto" />
           </div>
 
           {/* Copyright */}
