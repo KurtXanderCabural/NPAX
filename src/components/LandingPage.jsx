@@ -56,13 +56,14 @@ export default function LandingPage() {
       <div className="relative px-8 py-16 overflow-hidden h-auto">
         {/* Video Background */}
         <video
-          src="npax.mp4"
           className="absolute inset-0 w-full object-cover opacity-40"
           style={{ height: "600px" }}
           autoPlay
-          muted
           loop
-        />
+          playsinline
+        >
+           <source src="/video/npax.mp4" type="video/mp4" />
+        </video>
 
         {/* Left Content */}
         <div className="relative z-10 max-w-2xl">
