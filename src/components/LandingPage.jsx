@@ -145,11 +145,11 @@ export default function LandingPage() {
               { src: logo5, alt: "Logo 5" },
               { src: logo6, alt: "Logo 6" },
             ].map((l) => (
-              <div key={l.alt} className="px-5 sm:px-10 flex items-center justify-center">
+              <div key={l.alt} className="px-3 sm:px-8 lg:px-10 flex items-center justify-center">
                 <img
                   src={l.src}
                   alt={l.alt}
-                  className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+                  className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
                 />
               </div>
             ))}
@@ -165,11 +165,11 @@ export default function LandingPage() {
               { src: logo5, alt: "Logo 5" },
               { src: logo6, alt: "Logo 6" },
             ].map((l) => (
-              <div key={`${l.alt}-dup`} className="px-5 sm:px-10 flex items-center justify-center">
+              <div key={`${l.alt}-dup`} className="px-3 sm:px-8 lg:px-10 flex items-center justify-center">
                 <img
                   src={l.src}
                   alt={l.alt}
-                  className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+                  className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
                 />
               </div>
             ))}
