@@ -259,7 +259,7 @@ export default function LandingPage() {
             <div className="space-y-6 mb-16">
               <div className="border-b border-gray-700 pb-4">
                 <a
-                  href="https://www.n-pax.com/nxpert.php"
+                  href=""
                   className="text-2xl font-semibold text-white hover:text-gray-300 no-underline hover:no-underline"
                 >
                   ERP Systems
@@ -268,7 +268,7 @@ export default function LandingPage() {
 
               <div className="border-b border-gray-700 pb-4">
                 <a
-                  href="https://www.n-pax.com/hrc.php"
+                  href=""
                   className="text-2xl font-semibold text-white hover:text-gray-300 no-underline hover:no-underline"
                 >
                   HRIS Systems
@@ -277,7 +277,7 @@ export default function LandingPage() {
 
               <div className="border-b border-gray-700 pb-4">
                 <a
-                  href="https://www.n-pax.com/mcframega.php"
+                  href=""
                   className="text-2xl font-semibold text-white hover:text-gray-300 no-underline hover:no-underline"
                 >
                   Accounting Systems
@@ -286,7 +286,7 @@ export default function LandingPage() {
 
               <div className="border-b border-gray-700 pb-4">
                 <a
-                  href="https://www.n-pax.com/mcframe_iot.php"
+                  href="p"
                   className="text-2xl font-semibold text-white hover:text-gray-300 no-underline hover:no-underline"
                 >
                   IoT Systems
@@ -295,7 +295,7 @@ export default function LandingPage() {
 
               <div className="border-b border-gray-700 pb-4">
                 <a
-                  href="https://www.n-pax.com/manage_services.php"
+                  href=""
                   className="text-2xl font-semibold text-white hover:text-gray-300 no-underline hover:no-underline"
                 >
                   IT Services
@@ -371,7 +371,7 @@ export default function LandingPage() {
             <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:scale-105">
               <div className="aspect-video bg-gradient-to-br from-blue-900 to-cyan-900 flex items-center justify-center">
                 <a
-                  href="https://www.n-pax.com/update/news.php?p_id=15"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full h-full"
@@ -398,7 +398,7 @@ export default function LandingPage() {
             <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:scale-105">
               <div className="aspect-video bg-gradient-to-br from-blue-900 to-cyan-900 flex items-center justify-center">
                 <a
-                  href="https://www.n-pax.com/update/news.php?p_id=17"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full h-full"
@@ -488,13 +488,13 @@ export default function LandingPage() {
 
           {/* Copyright */}
           <div className="text-gray-400 text-base">
-            2025 CodeAI Solutions. All rights reserved.
+            2026 NOX Solutions. All rights reserved.
           </div>
 
           {/* Social Icons */}
           <div className="flex items-center space-x-4">
             <a
-              href="https://www.facebook.com/NPAXCEBU"
+              href=""
               className="text-gray-400 hover:text-white transition-colors"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -503,7 +503,7 @@ export default function LandingPage() {
             </a>
 
             <a
-              href="https://x.com/npax_solutions"
+              href=""
               className="text-gray-400 hover:text-white transition-colors"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -512,7 +512,7 @@ export default function LandingPage() {
             </a>
 
             <a
-              href="https://www.linkedin.com/company/n-pax-cebu-corporation/posts/?feedView=all"
+              href=""
               className="text-gray-400 hover:text-white transition-colors"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -521,7 +521,7 @@ export default function LandingPage() {
             </a>
 
             <a
-              href="https://www.youtube.com/@n-paxsolutions590"
+              href=""
               className="text-gray-400 hover:text-white transition-colors"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
