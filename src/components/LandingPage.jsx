@@ -1,5 +1,5 @@
 import React from "react";
-import nOxImage from "../assets/Nox.png";
+import nOxImage from "../assets/NOX.png";
 import { Globe } from "lucide-react";
 import logo1 from "../assets/1.png";
 import logo2 from "../assets/2.png";
