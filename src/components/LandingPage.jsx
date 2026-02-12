@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import { motion as Motion } from "framer-motion";
 import nOxImage from "../assets/NOX.png";
 import { Globe, Menu, X } from "lucide-react";
 import logo1 from "../assets/1.png";
@@ -9,6 +10,22 @@ import logo5 from "../assets/5.png";
 import logo6 from "../assets/6.png";
 import awardImage from "../assets/award.png";
 import chartImage from "../assets/Chart.png";
+
+const textContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const textItemUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+};
+
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -101,25 +118,55 @@ export default function LandingPage() {
         <div className="absolute inset-0 h-[460px] sm:h-[560px] lg:h-[640px] bg-gradient-to-b from-black/40 via-black/40 to-black" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 py-14 sm:py-16 lg:py-20">
-          <div className="max-w-2xl">
-            <h1 className="font-bold leading-tight mb-5 sm:mb-6 text-3xl sm:text-5xl lg:text-6xl">
+          <Motion.div
+            className="max-w-2xl"
+            variants={textContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5, once: false }}
+          >
+            <Motion.h1
+              className="font-bold leading-tight mb-5 sm:mb-6 text-3xl sm:text-5xl lg:text-6xl"
+              variants={textItemUp}
+              transition={{ duration: 0.5 }}
+            >
               <span className="text-blue-500">Technology Moves Fast.</span>
               <br />
               <span className="text-blue-500">But You Can Too.</span>
-            </h1>
+            </Motion.h1>
 
-            <p className="text-base sm:text-xl lg:text-2xl text-white mb-7 sm:mb-8">
+            <Motion.p
+              className="text-base sm:text-xl lg:text-2xl text-white mb-7 sm:mb-8"
+              variants={textItemUp}
+              transition={{ duration: 0.5 }}
+            >
               Evolve Your IT with First Focus
-            </p>
+            </Motion.p>
 
-            <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-yellow-500 text-yellow-500 rounded-lg text-base sm:text-lg lg:text-xl font-semibold hover:bg-yellow-500 hover:text-black transition-all duration-300 mb-8 sm:mb-12">
+            <Motion.button
+              className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-yellow-500 text-yellow-500 rounded-lg text-base sm:text-lg lg:text-xl font-semibold hover:bg-yellow-500 hover:text-black transition-all duration-300 mb-8 sm:mb-12"
+              variants={textItemUp}
+              transition={{ duration: 0.5 }}
+            >
               Get Started
-            </button>
+            </Motion.button>
 
-            <p className="text-sm sm:text-lg lg:text-xl text-white mb-6 sm:mb-8">23 years in excellence</p>
+            <Motion.p
+              className="text-sm sm:text-lg lg:text-xl text-white mb-6 sm:mb-8"
+              variants={textItemUp}
+              transition={{ duration: 0.5 }}
+            >
+              23 years in excellence
+            </Motion.p>
 
-            <img src={awardImage} alt="Awards" className="h-14 sm:h-16 lg:h-20 w-auto object-contain" />
-          </div>
+            <Motion.div variants={textItemUp} transition={{ duration: 0.5 }}>
+              <img
+                src={awardImage}
+                alt="Awards"
+                className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
+              />
+            </Motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -182,19 +229,38 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Left Column */}
           <div>
-            <h3 className="text-base sm:text-xl font-semibold text-white mb-6 sm:mb-8">
-              Our Services
-            </h3>
+            <Motion.div
+              variants={textContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.35, once: false }}
+            >
+              <Motion.h3
+                className="text-base sm:text-xl font-semibold text-white mb-6 sm:mb-8"
+                variants={textItemUp}
+                transition={{ duration: 0.5 }}
+              >
+                Our Services
+              </Motion.h3>
 
-            <h2 className="text-3xl sm:text-5xl font-bold text-blue-500 leading-tight mb-6 sm:mb-8">
-              We Help People Use Technology to Make a Difference
-            </h2>
+              <Motion.h2
+                className="text-3xl sm:text-5xl font-bold text-blue-500 leading-tight mb-6 sm:mb-8"
+                variants={textItemUp}
+                transition={{ duration: 0.5 }}
+              >
+                We Help People Use Technology to Make a Difference
+              </Motion.h2>
 
-            <p className="text-white text-sm sm:text-lg mb-10 sm:mb-12 leading-relaxed">
-              As a leading Managed Service Provider for mid-market businesses,
-              First Focus provides high-quality and reliable managed IT services
-              to help organisations between 50-200 staff succeed with IT.
-            </p>
+              <Motion.p
+                className="text-white text-sm sm:text-lg mb-10 sm:mb-12 leading-relaxed"
+                variants={textItemUp}
+                transition={{ duration: 0.5 }}
+              >
+                As a leading Managed Service Provider for mid-market businesses,
+                First Focus provides high-quality and reliable managed IT services
+                to help organisations between 50-200 staff succeed with IT.
+              </Motion.p>
+            </Motion.div>
 
             {/* Main Dashboard */}
             <div className="bg-gray-900 rounded-xl p-4 sm:p-7 border border-gray-700">
@@ -227,26 +293,48 @@ export default function LandingPage() {
             </div>
 
             {/* Threat Intelligence Section */}
-            <div className="mt-10 sm:mt-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5 sm:mb-6">
+            <Motion.div
+              className="mt-10 sm:mt-12"
+              variants={textContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.35, once: false }}
+            >
+              <Motion.h2
+                className="text-2xl sm:text-3xl font-bold text-white mb-5 sm:mb-6"
+                variants={textItemUp}
+                transition={{ duration: 0.5 }}
+              >
                 Predict, prevent, and protect with elite actionable threat intelligence
-              </h2>
+              </Motion.h2>
 
-              <p className="text-gray-300 text-sm sm:text-base mb-7 sm:mb-8 leading-relaxed">
+              <Motion.p
+                className="text-gray-300 text-sm sm:text-base mb-7 sm:mb-8 leading-relaxed"
+                variants={textItemUp}
+                transition={{ duration: 0.5 }}
+              >
                 Stay ahead of emerging threats with deep insights from Trend™ Research,
                 one of the world's largest cyber security research networks.
-              </p>
+              </Motion.p>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-blue-500 mb-3 sm:mb-4">
+              <Motion.h3
+                className="text-xl sm:text-2xl font-bold text-blue-500 mb-3 sm:mb-4"
+                variants={textItemUp}
+                transition={{ duration: 0.5 }}
+              >
                 Proactive defense strategies
-              </h3>
+              </Motion.h3>
 
-              <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              <Motion.p
+                className="text-gray-300 text-sm sm:text-base leading-relaxed"
+                variants={textItemUp}
+                transition={{ duration: 0.5 }}
+              >
                 Stay ahead of adversaries with industry{" "}
                 <span className="text-white font-semibold">Trend Zero Day Initiative™</span> (ZDI)
                 intelligence, detecting and mitigating vulnerabilities before they can be exploited.
-              </p>
-            </div>
+              </Motion.p>
+            </Motion.div>
           </div>
         </div>
       </section>
@@ -254,12 +342,28 @@ export default function LandingPage() {
       {/* Blogs and Insights Section */}
       <section id="blogs" className="px-4 sm:px-8 py-14 sm:py-20 border-t border-gray-800">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">
+          <Motion.div
+            className="text-center mb-10 sm:mb-16"
+            variants={textContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.35, once: false }}
+          >
+            <Motion.h2
+              className="text-2xl sm:text-4xl font-bold text-white mb-2 sm:mb-4"
+              variants={textItemUp}
+              transition={{ duration: 0.5 }}
+            >
               Blogs and Insights
-            </h2>
-            <p className="text-2xl sm:text-4xl font-bold text-white">Current Updates</p>
-          </div>
+            </Motion.h2>
+            <Motion.p
+              className="text-2xl sm:text-4xl font-bold text-white"
+              variants={textItemUp}
+              transition={{ duration: 0.5 }}
+            >
+              Current Updates
+            </Motion.p>
+          </Motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Blog Card 1 */}
@@ -272,14 +376,21 @@ export default function LandingPage() {
                   loading="lazy"
                 />
               </div>
-              <div className="p-5 sm:p-6">
+              <Motion.div
+                className="p-5 sm:p-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.4, once: false }}
+                transition={{ duration: 0.5 }}
+                variants={textItemUp}
+              >
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
                   Latest Event Highlights
                 </h3>
                 <p className="text-gray-400 text-sm">
                   Showcasing innovation and technology solutions at our recent event
                 </p>
-              </div>
+              </Motion.div>
             </div>
 
             {/* Blog Card 2 */}
@@ -294,14 +405,21 @@ export default function LandingPage() {
                   />
                 </a>
               </div>
-              <div className="p-5 sm:p-6">
+              <Motion.div
+                className="p-5 sm:p-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.4, once: false }}
+                transition={{ duration: 0.5 }}
+                variants={textItemUp}
+              >
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
                   HRC Partnership Success
                 </h3>
                 <p className="text-gray-400 text-sm">
                   Expanding our human resource solutions and technology integrations
                 </p>
-              </div>
+              </Motion.div>
             </div>
 
             {/* Blog Card 3 */}
@@ -316,14 +434,21 @@ export default function LandingPage() {
                   />
                 </a>
               </div>
-              <div className="p-5 sm:p-6">
+              <Motion.div
+                className="p-5 sm:p-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.4, once: false }}
+                transition={{ duration: 0.5 }}
+                variants={textItemUp}
+              >
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
                   Team Excellence Award
                 </h3>
                 <p className="text-gray-400 text-sm">
                   Celebrating our achievements and commitment to innovation
                 </p>
-              </div>
+              </Motion.div>
             </div>
           </div>
         </div>
